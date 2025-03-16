@@ -216,9 +216,13 @@ def read_hypercube_dataset(filename: str) -> List[Tuple[int, int]]:
     """Read the hypercube dataset from file"""
     edges = []
     with open(filename, 'r') as f:
+        # Skip the header line
+        next(f)  
         for line in f:
-            src, dst, _ = line.strip().split()
-            edges.append((int(src), int(dst)))
+            parts = line.strip().split()
+            if len(parts) >= 2:
+                src, dst = parts[0], parts[1]
+                edges.append((int(src), int(dst)))
     return edges
 
 def main():
