@@ -1,6 +1,3 @@
-Here is a README.md template you can use for your repository:
-
-```markdown
 # Local Beam Search and Genetic Algorithm
 
 This repository contains implementations of Local Beam Search and Genetic Algorithm for solving optimization problems. The primary focus is on two main problems:
